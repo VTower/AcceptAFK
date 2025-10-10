@@ -13,14 +13,17 @@
         android:background="#1F1D1D"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-16dp">
+        tools:layout_editor_absoluteY="0dp">
 
         <!--            android:background="#F4832D"-->
+
         <TextView
             android:id="@+id/textview_first"
             android:layout_width="348dp"
             android:layout_height="0dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/rounded_retangle_principal"
             android:shadowColor="#2C2A2A"
             android:shadowRadius="4"
@@ -29,6 +32,7 @@
             android:textColor="#263238"
             android:textSize="20sp"
             app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toTopOf="parent" />
 
