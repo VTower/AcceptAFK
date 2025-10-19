@@ -3,7 +3,7 @@
     <string name="home">Home</string>
     <string name="config">Config</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_fragmentHome">Homeer</string>
+    <string name="hello_fragmentHome">Home</string>
     <string name="hello_fragmentConfig">Configuration</string>
-
+    <string name="find_game">Find Game</string>
 </resources>
