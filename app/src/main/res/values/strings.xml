@@ -6,4 +6,6 @@
     <string name="hello_fragmentHome">Home</string>
     <string name="hello_fragmentConfig">Configuration</string>
     <string name="find_game">Find Game</string>
+    <string name="foto_do_game">Foto do Game</string>
+    <string name="game_name">Game Name</string>
 </resources>
