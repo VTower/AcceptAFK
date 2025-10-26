@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.vtower.acceptafk.R
 import com.vtower.acceptafk.adapter.HomeRecyclerAdapter
+import com.vtower.acceptafk.model.Game
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -52,11 +53,17 @@ class HomeFragment : Fragment() {
 
         layoutManager = LinearLayoutManager(requireContext())
 
-        recyclerView.adapter = HomeRecyclerAdapter()
+        recyclerView.adapter = HomeRecyclerAdapter(getGames())
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
 
     }
+
+    fun getGames(): List<Game> = listOf(
+        Game(R.drawable.dota_logo_144x144, "Dota 2"),
+        Game(R.drawable.dota_logo_144x144, "League of Legends"),
+        Game(R.drawable.dota_logo_144x144, "CS:GO"),
+    )
 
     companion object {
         /**
