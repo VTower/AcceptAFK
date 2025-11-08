@@ -9,6 +9,8 @@ import androidx.core.view.WindowInsetsCompat
 import com.vtower.acceptafk.R
 import com.vtower.acceptafk.fragment.ConfigFragment
 import com.vtower.acceptafk.fragment.HomeFragment
+import com.vtower.acceptafk.services.AcceptServerWebSocket
+import java.sql.Timestamp
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         configButton = findViewById(R.id.configButton)
 
         configButton.setOnClickListener {
+            enviarMensagem()
             supportFragmentManager.beginTransaction().replace(R.id.frameContent, fragmentConfig).commit()
         }
 
@@ -45,4 +48,22 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+
+    override fun onStart() {
+        super.onStart()
+
+        try {
+            AcceptServerWebSocket.startConnection("10.0.2.2")
+        }
+        catch (e: Exception)
+        {
+            println("################### Erro ao iniciar conexão  ${e.message}")
+        }
+    }
+
+    fun enviarMensagem() {
+        AcceptServerWebSocket.sendMessage("Pedro", "Olá servidor!")
+    }
+
+
 }
